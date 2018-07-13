@@ -1,5 +1,7 @@
 # kcoverage_single_MATLAB
 
+If you use this code for published work, please cite paper[1] listed below.
+
 These scripts calculate the k-coverage probability (based on SINR* values) in a single-tier cellular network using a method based on a homogeneous Poisson process model. More details are found in the (submitted) work [1], which presents the model that these scripts are based on.
 
 The script funProbCov.m uses a inclusion-exclusion-like formula and two types of integral to calculate the k-coverage probability in a network with log-normal shadowing (though the shadowing distribution can be somewhat arbitrary [1]) and without fading.
@@ -14,4 +16,5 @@ Running the file TestSimVsInt.m is a good place to start. The fading-incorporate
 
 *SINR = signal-to-interference-and-noise-ratio
 
-[1] H.P Keeler, B. Błaszczyszyn and M. Karray, 'SINR-based k-coverage probability in cellular networks with arbitrary shadowing', 2013. Online at http://arxiv.org/abs/1301.6491
+[1] H.P Keeler, B. Błaszczyszyn and M. Karray, 'SINR-based k-coverage probability in cellular networks with arbitrary shadowing', 2013. Online at http://arxiv.org/abs/1301.6491 or https://ieeexplore.ieee.org/document/6620410/.
+
