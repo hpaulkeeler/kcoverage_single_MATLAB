@@ -27,6 +27,9 @@
 % [3] B. Błaszczyszyn, M. Karray and F.-X. Klepper
 % 'Impact of the Geometry, Path-Loss Exponent and Random Shadowing on the
 % Mean Interference in Wireless Cellular Networks', WMNC, 2010
+%
+% NOTE: If you use this code in published work, please cite paper[1] by
+% Keeler, Blaszczyszyn and Karray, as listed above.
 
 function simPCovFade=funSimLogNormProbCovFade(tValues,betaConst,K,lambda,sigma,W,diskRadius,simNumb)
 

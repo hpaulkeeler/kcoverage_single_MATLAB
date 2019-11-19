@@ -15,6 +15,9 @@
 % [1] H.P. Keeler, B. Błaszczyszyn and M. Karray,
 % 'SINR-based coverage probability in cellular networks with arbitrary 
 % shadowing', ISIT, 2013
+%
+% NOTE: If you use this code in published work, please cite paper[1] by
+% Keeler, Blaszczyszyn and Karray, as listed above.
 
 function PCov=funProbCov(tValues,betaConst,x,numbMC,k)
 %General equation stems from Corollary 7 in [1]
