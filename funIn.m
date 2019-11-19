@@ -17,7 +17,7 @@
 % Author: H.P. Keeler, Inria Paris/ENS, 2014
 %
 % References:
-% [1] H.P. Keeler, B. BÅ‚aszczyszyn and M. Karray,
+% [1] H.P. Keeler, B. Bl‚aszczyszyn and M. Karray,
 % 'SINR-based coverage probability in cellular networks with arbitrary 
 % shadowing', ISIT, 2013
 %
@@ -25,9 +25,12 @@
 % Keeler, Blaszczyszyn and Karray, as listed above.
 
 function In=funIn(betaConst,n,x)
-% Calculates I_n with numerical integration or analytic solution (if x=0 (ie W=0))
-% x <>0 uses quadgk (which can handle singularities)
+% Calculates I_n with numerical integration or analytic solution (if x=0 
+% (ie W=0))x <>0 uses integral (which can handle singularities). An older 
+% version of the code used the integration function quadgk.
+% https://mathworks.com/help/matlab/ref/integral.html
 % x=0 uses analytic solution
+
 
 C=gamma(1+2./betaConst).*gamma(1-2./betaConst); %constant C';eq. (13) in [1] 
 if x==0
@@ -42,7 +45,7 @@ else
     %integral (12) in [1] after change of variable t=exp(-u.^2) or
     %u=log(1./t).^(1/2)
     %ft=@(t)(-log(t)).^(n-1).*exp(-(-log(t)).^(betaConst/2).*x.*((gamma(1-2./betaConst)).^(-betaConst/2)))/2;
-    %In=2^n./betaConst.^(n-1).*quadgk(ft,0,1)./C.^n/factorial(n-1);        
+    %In=2^n./betaConst.^(n-1).*integral(ft,0,1)./C.^n/factorial(n-1);        
     
     %latest quadrature of (12) in [1] after change of variable
     %%%u=t./(1-t);
