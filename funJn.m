@@ -28,7 +28,7 @@ if nargin==3
 end
 
 Jn=zeros(size(Tn));
-%%% Use  quadrature methods
+%%% Use quadrature methods
 if n==3
     for k=1:length(Tn)
         fv=@(v1,v2)(1./((v1.*v2)+Tn(k))).*(1./((v1.*(1-v2))+Tn(k))).*(v1.*v2.*(1-v2).*(1-v1)).^(2/betaConst).*v1.^(2/betaConst+1);
